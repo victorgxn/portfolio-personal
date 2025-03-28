@@ -65,7 +65,7 @@ export default function Home() {
               <EnterpriseCard
                 logo="image/blitzshare.png"
                 title="BlitzShare"
-                description="Crear, organiza y sube tu contenido a +5 plataformas desde un mismo sitio web"
+                description="Crear, organiza y sube tu contenido a todas las plataformas desde un mismo sitio web"
                 buttonText="Descúbrelo"
                 buttonLink="https://www.instagram.com/BlitzShare"
               />
@@ -88,7 +88,6 @@ export default function Home() {
         {/* Camera Gear 
         <CameraGear />
         */}
-
         {/* Social Medica Buttons */}
         <SocialMediaButtons />
       </main>
