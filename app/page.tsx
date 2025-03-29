@@ -32,7 +32,6 @@ export default function Home() {
     <div className="min-h-screen bg-black text-white flex flex-col">
       <main className="flex-grow flex flex-col items-center">
         <HeroSection />
-
         {/* Enterprise Cards */}
         <div className="w-full max-w-5xl mb-20 px-4">
           <motion.h2
@@ -56,7 +55,7 @@ export default function Home() {
               <EnterpriseCard
                 logo="image/codegxn.png"
                 title="CodeGXN"
-                description="Canal dedicado a enseñar programación de manera práctica y informatica."
+                description="Canal dedicado a enseñar programación."
                 buttonText="Descúbrelo"
                 buttonLink="https://www.youtube.com/@codegxn"
               />
@@ -65,7 +64,7 @@ export default function Home() {
               <EnterpriseCard
                 logo="image/blitzshare.png"
                 title="BlitzShare"
-                description="Crear, organiza y sube tu contenido a todas las plataformas desde un mismo sitio web"
+                description="Programa y sube tu contenido con un solo click a todas las plataformas"
                 buttonText="Descúbrelo"
                 buttonLink="https://www.instagram.com/BlitzShare"
               />
@@ -74,7 +73,7 @@ export default function Home() {
               <EnterpriseCard
                 logo="image/discord-logo.webp"
                 title="Discord"
-                description="Comunidad y discord del canal. Si te gusta la programacion y crear cosas es tu sitio"
+                description="Si te gusta la programacion y crear cosas es tu sitio"
                 buttonText="Unete"
                 buttonLink="https://discord.gg/EbEuStFF5z"
               />
@@ -88,7 +87,7 @@ export default function Home() {
         {/* Camera Gear 
         <CameraGear />
         */}
-        {/* Social Medica Buttons */}
+        {/* Social Media Buttons */}
         <SocialMediaButtons />
       </main>
 

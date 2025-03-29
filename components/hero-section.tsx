@@ -1,7 +1,7 @@
-"use client"
+"use client";
 
-import Image from "next/image"
-import { motion } from "framer-motion"
+import Image from "next/image";
+import { motion } from "framer-motion";
 
 export default function HeroSection() {
   return (
@@ -20,15 +20,21 @@ export default function HeroSection() {
         />
       </motion.div>
 
+      <motion.span
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: 0.2 }}
+        className="px-4 py-1 bg-[#1A1A1A] rounded-full text-[#4AFF53] text-sm font-medium mb-6"
+      >
+        Victor Gonzalez
+      </motion.span>
+
       <motion.h2
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.2 }}
         className="text-2xl md:text-3xl font-bold mb-4"
-      >
-        <span className="text-[#FCFCFA]">Hola, Soy </span>
-        <span className="text-[#4AFF53]">Victor Gonzalez</span>
-      </motion.h2>
+      ></motion.h2>
 
       <motion.h1
         initial={{ opacity: 0, y: 20 }}
@@ -36,12 +42,20 @@ export default function HeroSection() {
         transition={{ duration: 0.5, delay: 0.4 }}
         className="text-4xl md:text-6xl font-medium mb-6 leading-tight"
       >
-        <span className="text-white">Building</span> <span className="text-[#4AFF53] font-serif italic">cool</span>{" "}
+        <span className="text-white">Building</span>{" "}
+        <span className="text-[#4AFF53] font-serif italic">cool</span>{" "}
         <span className="text-white">tech things and</span>{" "}
         <span className="text-[#4AFF53] font-serif italic">sharing</span>{" "}
         <span className="text-white">my progress.</span>
       </motion.h1>
+      <motion.p
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: 0.6 }}
+        className="text-lg md:text-xl text-[#999999] max-w-2xl mb-8"
+      >
+        Programador, creador de contenido y emprendedor.
+      </motion.p>
     </div>
-  )
+  );
 }
-
