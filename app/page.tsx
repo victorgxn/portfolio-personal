@@ -66,7 +66,7 @@ export default function Home() {
                 title="BlitzShare"
                 description="Programa y sube tu contenido con un solo click a todas las plataformas"
                 buttonText="Descúbrelo"
-                buttonLink="https://www.instagram.com/BlitzShare"
+                buttonLink="https://www.blitz-share.com/"
               />
             </motion.div>
             <motion.div variants={itemVariants}>
