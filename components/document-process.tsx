@@ -29,14 +29,13 @@ export default function DocumentProcess() {
             <div className="w-2.5 h-2.5 rounded-full bg-[#E3E3E3]"></div>
           </div>
         </div>
-        <div className="relative aspect-video">
+        <div className="video-container">
           <iframe
             ref={videoRef}
             src="https://www.youtube.com/embed/vvpXpNZXhjE?si=EkmgSQqqp3p8hHAK"
             title="Como consegui mi primer trabajo como programador"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
-            className="w-full h-full"
             onClick={handlePlay}
           />
           <p className="absolute bottom-4 left-1/2 transform -translate-x-1/2 text-sm text-[#999999] bg-black bg-opacity-50 px-2 py-1 rounded">

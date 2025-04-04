@@ -33,7 +33,11 @@ export default function Home() {
       <main className="flex-grow flex flex-col items-center">
         <HeroSection />
         {/* Enterprise Cards */}
-        <div className="w-full max-w-5xl mb-20 px-4">
+        <section
+          aria-label="Proyectos"
+          id="proyectos"
+          className="w-full max-w-5xl mb-20 px-4"
+        >
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -64,7 +68,7 @@ export default function Home() {
               <EnterpriseCard
                 logo="image/blitzshare.png"
                 title="BlitzShare"
-                description="Programa y sube tu contenido con un solo click a todas las plataformas"
+                description="Gestiona tus redes sociales en un solo lugar"
                 buttonText="Descúbrelo"
                 buttonLink="https://www.blitz-share.com/"
               />
@@ -73,22 +77,28 @@ export default function Home() {
               <EnterpriseCard
                 logo="image/discord-logo.webp"
                 title="Discord"
-                description="Si te gusta la programacion y crear cosas es tu sitio"
+                description="Si te gusta la programacion y crear proyectos es tu sitio"
                 buttonText="Unete"
                 buttonLink="https://discord.gg/EbEuStFF5z"
               />
             </motion.div>
           </motion.div>
-        </div>
+        </section>
 
         {/* Document Process */}
-        <DocumentProcess />
+        <section aria-label="Proceso" id="proceso">
+          <DocumentProcess />
+        </section>
 
-        {/* Camera Gear 
-        <CameraGear />
-        */}
+        {/* Camera Gear */}
+        <section aria-label="Equipamiento" id="equipo">
+          <CameraGear />
+        </section>
+
         {/* Social Media Buttons */}
-        <SocialMediaButtons />
+        <section aria-label="Redes Sociales" id="contacto">
+          <SocialMediaButtons />
+        </section>
       </main>
 
       {/* Footer */}

@@ -8,34 +8,34 @@ import { ExternalLink } from "lucide-react";
 // Datos del equipo fotográfico
 const cameraGear = [
   {
-    name: "Sony Alpha ZV-E1",
-    image: "/placeholder.svg?height=120&width=120",
-    amazonUrl: "https://amzn.to/example1",
+    name: "Sony zve10",
+    image: "image/setup/camara.webp",
+    amazonUrl: "https://amzn.to/449ytnu",
   },
   {
-    name: "Sony E 11mm F1.8",
-    image: "/placeholder.svg?height=120&width=120",
-    amazonUrl: "https://amzn.to/example2",
+    name: "Sony E 11 mm F1.8",
+    image: "image/setup/objetivo.webp",
+    amazonUrl: "https://amzn.to/42wikqX",
   },
   {
-    name: "Tamron 28-75mm F/2.8",
-    image: "/placeholder.svg?height=120&width=120",
-    amazonUrl: "https://amzn.to/example3",
+    name: "Microfonos",
+    image: "/image/setup/microfono.png",
+    amazonUrl: "https://amzn.to/3FTe1wZ",
   },
   {
-    name: "DJI Mini 3 Pro",
-    image: "/placeholder.svg?height=120&width=120",
-    amazonUrl: "https://amzn.to/example4",
+    name: "Macbook pro M1",
+    image: "image/setup/portatil.png",
+    amazonUrl: "https://amzn.to/4jnWQSV",
   },
   {
-    name: "Rode Wireless GO II",
-    image: "/placeholder.svg?height=120&width=120",
-    amazonUrl: "https://amzn.to/example5",
+    name: "Teclado",
+    image: "image/setup/teclado.png",
+    amazonUrl: "https://amzn.to/42jjnJE",
   },
   {
-    name: "Godox SL-60W",
-    image: "/placeholder.svg?height=120&width=120",
-    amazonUrl: "https://amzn.to/example6",
+    name: "Mesa elevable",
+    image: "image/setup/mesa.avif",
+    amazonUrl: "https://amzn.to/3XKFDuC",
   },
 ];
 

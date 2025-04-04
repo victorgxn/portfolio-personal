@@ -15,6 +15,14 @@ const nextConfig = {
   },
   images: {
     unoptimized: true,
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'www.youtube.com',
+        port: '',
+        pathname: '/**',
+      },
+    ],
   },
   experimental: {
     webpackBuildWorker: true,

@@ -1,11 +1,14 @@
-import Link from "next/link"
-import { socialLinks } from "@/data/social"
+import Link from "next/link";
+import { socialLinks } from "@/data/social";
 
 export default function SocialMediaButtons() {
   return (
-    <div className="w-full max-w-xl mx-auto px-4 mb-4">
+    <div className="w-full max-w-xl mx-auto px-4 mb-12">
       <h2 className="text-3xl md:text-4xl font-medium text-center mb-8">
-        Conéctate <span className="font-serif italic font-normal text-[#4AFF53]">conmigo</span>
+        Conéctate{" "}
+        <span className="font-serif italic font-normal text-[#4AFF53]">
+          conmigo
+        </span>
       </h2>
       <div className="flex justify-center space-x-8">
         {socialLinks.map((social) => (
@@ -22,6 +25,5 @@ export default function SocialMediaButtons() {
         ))}
       </div>
     </div>
-  )
+  );
 }
-

@@ -12,8 +12,42 @@ const instrumentSerif = Instrument_Serif({
 });
 
 export const metadata: Metadata = {
-  title: "Victor Gonzalez",
-  description: "Programador, Creador de contenido",
+  title: "Victor Gonzalez (VictorGXN) - Programador y Creador de Contenido",
+  description:
+    "Portfolio de Victor Gonzalez (VictorGXN) - Programador, creador de contenido y fundador de CodeGXN. Proyectos de desarrollo web, tutoriales de programación y recursos para desarrolladores.",
+  keywords: [
+    "VictorGXN",
+    "Victor Gonzalez",
+    "CodeGXN",
+    "programación",
+    "desarrollo web",
+    "tutoriales",
+    "BlitzShare",
+    "portfolio",
+    "desarrollador",
+  ],
+  authors: [{ name: "Victor Gonzalez", url: "https://victorgxn.com" }],
+  creator: "Victor Gonzalez (VictorGXN)",
+  publisher: "Victor Gonzalez",
+  robots: "index, follow",
+  alternates: {
+    canonical: "https://victorgxn.com",
+  },
+  openGraph: {
+    title: "Victor Gonzalez (VictorGXN) - Programador y Creador de Contenido",
+    description:
+      "Portfolio oficial de Victor Gonzalez (VictorGXN) - Programador, creador de contenido y fundador de CodeGXN.",
+    url: "https://victorgxn.com",
+    siteName: "Victor Gonzalez Portfolio",
+    locale: "es_ES",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Victor Gonzalez (VictorGXN)",
+    description: "Programador, Creador de contenido y fundador de CodeGXN",
+    creator: "@victorgxn",
+  },
 };
 
 export default function RootLayout({
@@ -22,7 +56,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${inter.className}`}>
+    <html lang="es" className={`${inter.className}`}>
+      <head>
+        <link rel="canonical" href="https://victorgxn.com" />
+      </head>
       <body>{children}</body>
     </html>
   );
