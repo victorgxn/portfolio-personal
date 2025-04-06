@@ -33,6 +33,9 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://victorgxn.com",
   },
+  icons: {
+    icon: "/favicon.png",
+  },
   openGraph: {
     title: "Victor Gonzalez (VictorGXN) - Programador y Creador de Contenido",
     description:
@@ -59,6 +62,7 @@ export default function RootLayout({
     <html lang="es" className={`${inter.className}`}>
       <head>
         <link rel="canonical" href="https://victorgxn.com" />
+        <link rel="icon" href="/favicon.png" />
       </head>
       <body>{children}</body>
     </html>
