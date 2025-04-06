@@ -40,65 +40,109 @@ const cameraGear = [
 ];
 
 export default function CameraGear() {
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.08,
+      },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0 },
+  };
+
   return (
-    <div className="w-full max-w-5xl mx-auto px-4 mb-20">
+    <div className="w-full max-w-5xl mx-auto px-4 mb-20 relative">
+      {/* Efectos de fondo */}
+      <div className="absolute top-20 -right-20 w-64 h-64 bg-[#4AFF53]/5 rounded-full blur-[100px] -z-10" />
+      <div className="absolute bottom-20 -left-20 w-64 h-64 bg-[#4AFF53]/5 rounded-full blur-[100px] -z-10" />
+
       <motion.div
         initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
+        whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
+        viewport={{ once: true }}
         className="text-center mb-10"
       >
-        <h2 className="text-4xl md:text-5xl font-medium mb-4">
+        <h2 className="text-4xl md:text-5xl font-bold mb-4">
           📸 Mi{" "}
           <span className="font-serif italic font-normal text-[#4AFF53]">
             setup
           </span>
         </h2>
-        <p className="text-[#999999] max-w-2xl mx-auto">
+        <p className="text-[#BBBBBB] max-w-2xl mx-auto text-lg">
           Todo mi equipo que uso para grabar y programar.
         </p>
       </motion.div>
 
       <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.5, delay: 0.2 }}
+        variants={containerVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
         className="grid grid-cols-2 md:grid-cols-3 gap-6"
       >
         {cameraGear.map((item, index) => (
           <motion.div
             key={item.name}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.3, delay: 0.1 + index * 0.1 }}
-            className="bg-[#1A1A1A] rounded-xl overflow-hidden group"
+            variants={itemVariants}
+            whileHover={{ y: -5, scale: 1.02 }}
+            className="bg-gradient-to-b from-[#1A1A1A] to-[#151515] rounded-xl overflow-hidden group border border-[#2A2A2A] transition-all duration-300 hover:border-[#4AFF53]/20 shadow-md hover:shadow-xl hover:shadow-[#4AFF53]/5"
           >
-            <div className="p-6 flex flex-col items-center text-center">
-              <div className="relative h-24 w-24 mb-4">
+            <div className="p-6 flex flex-col items-center text-center h-full">
+              <motion.div
+                className="relative h-28 w-28 mb-5"
+                whileHover={{
+                  scale: 1.08,
+                  rotateZ: 3,
+                  transition: { type: "spring", stiffness: 300 },
+                }}
+              >
                 <Image
                   src={item.image || "/placeholder.svg"}
                   alt={item.name}
                   fill
-                  className="object-contain"
+                  className="object-contain drop-shadow-[0_5px_15px_rgba(74,255,83,0.15)]"
                 />
-              </div>
+
+                {/* Efecto de brillo al hacer hover */}
+                <div className="absolute inset-0 bg-gradient-to-tr from-[#4AFF53]/0 to-[#4AFF53]/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-full" />
+              </motion.div>
 
               <h3 className="text-white font-medium text-lg mb-3">
                 {item.name}
               </h3>
 
-              <Link
-                href={item.amazonUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-xs text-[#999999] hover:text-[#4AFF53] transition-colors flex items-center gap-1 group-hover:underline"
-              >
-                Ver en Amazon
-                <ExternalLink className="w-3 h-3" />
-              </Link>
+              <motion.div whileHover={{ y: -2 }} className="mt-auto pt-3">
+                <Link
+                  href={item.amazonUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-xs bg-black/30 text-[#AAAAAA] hover:text-[#4AFF53] transition-all flex items-center gap-1 px-4 py-2 rounded-full border border-[#333] hover:border-[#4AFF53]/30 hover:bg-[#4AFF53]/5"
+                >
+                  Ver en Amazon
+                  <ExternalLink className="w-3 h-3" />
+                </Link>
+              </motion.div>
             </div>
           </motion.div>
         ))}
+      </motion.div>
+
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ delay: 0.5, duration: 0.5 }}
+        viewport={{ once: true }}
+        className="mt-8 text-center"
+      >
+        <p className="text-[#777777] text-sm italic">
+          * Los enlaces contienen afiliados
+        </p>
       </motion.div>
     </div>
   );
