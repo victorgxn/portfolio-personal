@@ -139,11 +139,7 @@ export default function CameraGear() {
         transition={{ delay: 0.5, duration: 0.5 }}
         viewport={{ once: true }}
         className="mt-8 text-center"
-      >
-        <p className="text-[#777777] text-sm italic">
-          * Los enlaces contienen afiliados
-        </p>
-      </motion.div>
+      ></motion.div>
     </div>
   );
 }

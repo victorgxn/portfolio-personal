@@ -7,6 +7,28 @@ import SocialMediaButtons from "@/components/social-media-buttons";
 import Footer from "@/components/footer";
 import { motion } from "framer-motion";
 import CameraGear from "@/components/camera-gear";
+import dynamic from "next/dynamic";
+
+// Importar BlogPreview dinámicamente para evitar problemas de SSR
+const BlogPreview = dynamic(() => import("@/components/BlogPreview"), {
+  ssr: true, // Habilitamos SSR para este componente
+  loading: () => (
+    <div className="w-full max-w-5xl mb-20 px-4">
+      <div className="flex justify-between items-center mb-8">
+        <h2 className="text-4xl md:text-5xl font-medium">
+          Últimos{" "}
+          <span className="font-serif italic font-normal text-[#4AFF53]">
+            posts
+          </span>
+        </h2>
+      </div>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="animate-pulse bg-gray-800 rounded-lg h-48"></div>
+        <div className="animate-pulse bg-gray-800 rounded-lg h-48"></div>
+      </div>
+    </div>
+  ),
+});
 
 export default function Home() {
   const containerVariants = {
@@ -95,13 +117,20 @@ export default function Home() {
           <CameraGear />
         </section>
 
+        {/* Blog Preview */}
+        <motion.section
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+        >
+          <BlogPreview />
+        </motion.section>
+
         {/* Social Media Buttons */}
         <section aria-label="Redes Sociales" id="contacto">
           <SocialMediaButtons />
         </section>
       </main>
-
-      {/* Footer */}
       <Footer />
     </div>
   );

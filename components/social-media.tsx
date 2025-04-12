@@ -1,12 +1,25 @@
-import Link from "next/link"
-import { Instagram, TwitterIcon as TikTok, Youtube, Linkedin } from "lucide-react"
+import Link from "next/link";
+import {
+  Instagram,
+  TwitterIcon as TikTok,
+  Youtube,
+  Linkedin,
+} from "lucide-react";
 
 const socialLinks = [
-  { name: "Instagram", icon: Instagram, url: "https://www.instagram.com/victorgxn/" },
+  {
+    name: "Instagram",
+    icon: Instagram,
+    url: "https://www.instagram.com/victorgxn/",
+  },
   { name: "TikTok", icon: TikTok, url: "https://www.tiktok.com/@victorgxnz" },
   { name: "YouTube", icon: Youtube, url: "https://www.youtube.com/@victorgxn" },
-  { name: "LinkedIn", icon: Linkedin, url: "https://www.linkedin.com/in/victorgxn/" },
-]
+  {
+    name: "LinkedIn",
+    icon: Linkedin,
+    url: "https://www.linkedin.com/in/victorgxn/",
+  },
+];
 
 export default function SocialMedia() {
   return (
@@ -31,6 +44,5 @@ export default function SocialMedia() {
         ))}
       </div>
     </div>
-  )
+  );
 }
-
