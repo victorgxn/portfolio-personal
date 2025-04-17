@@ -30,14 +30,15 @@ export default function DocumentProcess() {
           </div>
         </div>
         <div className="video-container">
-          <iframe
-            ref={videoRef}
-            src="https://www.youtube.com/embed/vvpXpNZXhjE?si=EkmgSQqqp3p8hHAK"
-            title="Como consegui mi primer trabajo como programador"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-            onClick={handlePlay}
-          />
+        <iframe
+  ref={videoRef}
+  src="https://www.youtube.com/embed/btxsDec_60o?si=XSaylRAusCvq0wmh"
+  title="Como consegui mi primer trabajo como programador"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+  allowFullScreen
+  onClick={handlePlay}
+/>
+
           <p className="absolute bottom-4 left-1/2 transform -translate-x-1/2 text-sm text-[#999999] bg-black bg-opacity-50 px-2 py-1 rounded">
             Mi último vídeo de YouTube
           </p>
